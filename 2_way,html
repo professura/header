@@ -1,0 +1,49 @@
+The second way is to use the "css" percent
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .header-main-props {
+            font-size: 20px;
+            width: auto;
+            height: 64px;
+        }
+
+        .greeting {
+            font-family: Roboto;
+            font-weight: bold;
+        }
+
+        .time {
+            font-family: Roboto;
+            font-weight: regular;
+            font-size: calc(100% + 16px)
+        }
+
+        .greeting+.time {
+            margin-left: 50px;
+        }
+
+        .header {
+            display: flex;
+            background-color: #e3e3e3;
+            flex-direction: row;
+            padding: 0 20px 0 20px;
+            align-items: center;
+            justify-content: space-between;
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header header-main-props">
+        <div class="greeting">Welcome, username!</div>
+        <div class="time">11:41 MSK</div>
+    </div>
+</body>
+
+</html>
