@@ -1,0 +1,53 @@
+
+The first way is to use the "css" variables
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --header-font-size: 20px;
+            --header-width: auto;
+            --header-height: 64px;
+        }
+
+        .greeting {
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: var(--header-font-size)
+        }
+
+        .time {
+            font-family: Roboto;
+            font-weight: regular;
+            font-size: calc(var(--header-font-size) + 16px)
+        }
+
+        .greeting + .time {
+            margin-left: 50px;
+        }
+
+        .header {
+            display: flex;
+            background-color: #e3e3e3;
+            flex-direction: row;
+            padding: 0 20px 0 20px;
+            height: var(--header-height);
+            align-items: center;
+            justify-content: space-between;
+            white-space: pre;
+            width: var(--header-width);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="greeting">Welcome, username!</div>
+        <div class="time">11:41 MSK</div>
+    </div>
+</body>
+
+</html>
